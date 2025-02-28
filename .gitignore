@@ -8,3 +8,6 @@ public/*
 tmp/*
 
 .ruby-version
+
+public/**
+public/**/*
