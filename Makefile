@@ -1,4 +1,4 @@
 dev:
-	air & \
+	go run . & \
 	pnpm build:css &
 	pnpm watch:js
