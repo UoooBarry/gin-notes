@@ -4,11 +4,15 @@
 	"description": "gin-notes",
 	"scripts": {
 		"build:css": "tailwindcss -i ./assets/styles/main.css -o ./public/css/tailwind.css --watch",
-		"build": "npm run build:css"
+		"watch:js": "onchange -i 'assets/js/**/*.js' -- pnpm run compress:js",
+		"build": "pnpm run --parallel build:css watch:js",
+		"compress:js": "./scripts/compress-js.sh"
 	},
 	"devDependencies": {
-		"tailwindcss": "^4.0.9",
+		"autoprefixer": "^10.4.20",
+		"onchange": "^7.1.0",
 		"postcss": "^8.5.3",
-		"autoprefixer": "^10.4.20"
+		"tailwindcss": "^4.0.9",
+		"uglify-js": "^3.19.3"
 	}
 }

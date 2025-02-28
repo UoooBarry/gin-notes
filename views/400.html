@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+{{ block "head" . }}{{ end }}
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="text-center p-6 bg-gray-800 rounded-lg shadow-xl w-full max-w-lg">
+            <h1 class="text-6xl font-bold text-red-500 mb-4">500</h1>
+            <p class="text-xl text-gray-400 mb-6">Oops! Something went wrong on our side.</p>
+            <p class="text-lg text-gray-200 mb-4">{{ .message }}</p>
+
+            <div class="mt-6">
+                <a href="/" class="text-blue-400 hover:text-blue-600">Go Back Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

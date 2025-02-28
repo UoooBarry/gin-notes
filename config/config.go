@@ -19,6 +19,7 @@ func Init() {
 	}
 
 	err = DB.AutoMigrate(&models.User{})
+	err = DB.AutoMigrate(&models.Category{})
 	if err != nil {
 		panic("failed to migrate database")
 	}

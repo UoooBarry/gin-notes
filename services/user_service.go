@@ -7,19 +7,15 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// UserService 业务逻辑层
 type UserService struct {
 	UserRepo *repositories.UserRepository
 }
 
-// NewUserService 创建一个新的 UserService
 func NewUserService(userRepo *repositories.UserRepository) *UserService {
 	return &UserService{UserRepo: userRepo}
 }
 
-// CreateUser 创建一个新的用户并保存
 func (service *UserService) CreateUser(username, password string) (*models.User, error) {
-	// 密码加密
 	user := &models.User{
 		Username: username,
 	}

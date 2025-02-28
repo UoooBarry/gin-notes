@@ -1,2 +1,4 @@
 dev:
-	air & pnpm build:css
+	air & \
+	pnpm build:css &
+	pnpm watch:js

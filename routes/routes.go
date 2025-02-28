@@ -16,6 +16,11 @@ func Setup(router *gin.Engine) {
 	router.POST("/users", userController.CreateUser)
 	// router.POST("/login", controllers.LoginUser)
 
-	homeController := controllers.NewHomeController()
+	categoryRepo := repositories.NewCategoryRepository(config.DB)
+	categoryServicve := services.NewCategoryService(categoryRepo)
+	homeController := controllers.NewHomeController(categoryServicve)
 	router.GET("/", homeController.Index)
+	router.GET("/categories", homeController.CategoriesList)
+	router.GET("/categories/new", homeController.NewCategory)
+	router.POST("/categories", homeController.CreateCategory)
 }

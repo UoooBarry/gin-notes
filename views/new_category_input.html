@@ -1,0 +1,7 @@
+<li hx-on::load="focusNewInput(this)">
+    <form hx-post="/categories" hx-target="#navbar-list" hx-swap="innerHTML" class="flex">
+        <input type="text" name="name" class="bg-transparent border-none outline-none w-full text-white"
+            placeholder="Enter category name" required />
+        <button type="submit" class="text-blue-500 ml-2">Save</button>
+    </form>
+</li>
