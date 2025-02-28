@@ -1,0 +1,10 @@
+data/app.db
+
+node_modules
+.pnpm-store
+
+public/*
+
+tmp/*
+
+.ruby-version

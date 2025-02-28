@@ -1,0 +1,14 @@
+{
+	"name": "gin-notes",
+	"version": "1.0.0",
+	"description": "gin-notes",
+	"scripts": {
+		"build:css": "tailwindcss -i ./assets/styles/main.css -o ./public/css/tailwind.css --watch",
+		"build": "npm run build:css"
+	},
+	"devDependencies": {
+		"tailwindcss": "^4.0.9",
+		"postcss": "^8.5.3",
+		"autoprefixer": "^10.4.20"
+	}
+}

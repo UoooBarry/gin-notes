@@ -1,0 +1,28 @@
+{{ define "title" }}Home Page{{ end }} <!-- 自定义标题 -->
+
+{{ define "head" }}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+<link href="/static/css/tailwind.css" rel="stylesheet">
+{{ end }}
+
+
+{{ define "navbar" }}
+<nav class="w-64 dark:bg-gray-800 p-4 h-screen fixed top-0 left-0">
+    <div class="flex justify-between items-center">
+        <div class="text-white text-lg font-semibold">Notes</div>
+        <button onclick="toggleDarkMode()" class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3" />
+            </svg>
+        </button>
+    </div>
+    <ul class="mt-8 space-y-4">
+        {{ range .categories }}
+        <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}
